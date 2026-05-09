@@ -211,8 +211,6 @@ function connect() {
                             try {
                                 const displayName = d.nick || d.user.global_name || d.user.username;
                                 const avatarUrl = getAvatarUrl(d.user, d, d.guild_id);
-                                
-                                // ディスプレイネーム (username) の形式を作成
                                 let webhookName = `${displayName} (${d.user.username})`;
                                 if (webhookName.length > 80) webhookName = webhookName.substring(0, 80);
 
